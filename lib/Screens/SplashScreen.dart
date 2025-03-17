@@ -1,14 +1,28 @@
 import 'dart:async';
 
+import 'package:chat_application/Data/Remote/FireBase%20repo.dart';
 import 'package:chat_application/OnBoarding/Login%20page.dart';
 import 'package:chat_application/OnBoarding/SIgn%20up%20page.dart';
+import 'package:chat_application/Screens/Messages%20page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), (){
+    Timer(Duration(seconds: 3), ()async{
+
+      /// Check Session
+      var prefs = await SharedPreferences.getInstance();
+      String ? value = prefs.getString(FireBaseRepository.PREF_USER_ID_KEY);
+
+      Widget nextPage = LoginPage();
+
+      if(value!=null && value!= ""){
+        nextPage = AllMessagesPage();
+      }
+
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));
     });
     return Scaffold(

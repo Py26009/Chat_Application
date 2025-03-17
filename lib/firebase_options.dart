@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -44,39 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDft4TdN2TC7nsJ9P8qorsbASnm-gb1Xo8',
-    appId: '1:719065730202:web:eb7c180e23d5b46d33e323',
-    messagingSenderId: '719065730202',
-    projectId: 'chat-app-39f17',
-    authDomain: 'chat-app-39f17.firebaseapp.com',
-    storageBucket: 'chat-app-39f17.firebasestorage.app',
-    measurementId: 'G-FXS5DQ45PX',
+    apiKey: 'AIzaSyDr_WreeqH3G4CjMFomMc_gKx1euU-0SA4',
+    appId: '1:715043575706:web:5671630ba3824b7aac4c23',
+    messagingSenderId: '715043575706',
+    projectId: 'chatapplication-4e5e8',
+    authDomain: 'chatapplication-4e5e8.firebaseapp.com',
+    storageBucket: 'chatapplication-4e5e8.firebasestorage.app',
+    measurementId: 'G-PE34KXVZJR',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBwFYAtP2NS8m80gT7fn5z3noeBX3Ui6IA',
-    appId: '1:719065730202:android:a72c14deae080b1a33e323',
-    messagingSenderId: '719065730202',
-    projectId: 'chat-app-39f17',
-    storageBucket: 'chat-app-39f17.firebasestorage.app',
+    apiKey: 'AIzaSyCRS7nGjS8KWs6WRlzJuEBAl60Sg01uo8A',
+    appId: '1:715043575706:android:481360fbf24bde87ac4c23',
+    messagingSenderId: '715043575706',
+    projectId: 'chatapplication-4e5e8',
+    storageBucket: 'chatapplication-4e5e8.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDOhtdcxmPPwHxVQ6gIvGyifkduTa2X1UI',
-    appId: '1:719065730202:ios:eb3e342e7f9f220a33e323',
-    messagingSenderId: '719065730202',
-    projectId: 'chat-app-39f17',
-    storageBucket: 'chat-app-39f17.firebasestorage.app',
+    apiKey: 'AIzaSyCM8PxdMTGb2Td1ZI73eErKN0LH0eZkN-0',
+    appId: '1:715043575706:ios:2a6fb3883bf9bfb6ac4c23',
+    messagingSenderId: '715043575706',
+    projectId: 'chatapplication-4e5e8',
+    storageBucket: 'chatapplication-4e5e8.firebasestorage.app',
     iosBundleId: 'com.example.chatApplication',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDft4TdN2TC7nsJ9P8qorsbASnm-gb1Xo8',
-    appId: '1:719065730202:web:48f5fc3e447b48cd33e323',
-    messagingSenderId: '719065730202',
-    projectId: 'chat-app-39f17',
-    authDomain: 'chat-app-39f17.firebaseapp.com',
-    storageBucket: 'chat-app-39f17.firebasestorage.app',
-    measurementId: 'G-6GX54V49GE',
+    apiKey: 'AIzaSyDr_WreeqH3G4CjMFomMc_gKx1euU-0SA4',
+    appId: '1:715043575706:web:2b5b4241b5577202ac4c23',
+    messagingSenderId: '715043575706',
+    projectId: 'chatapplication-4e5e8',
+    authDomain: 'chatapplication-4e5e8.firebaseapp.com',
+    storageBucket: 'chatapplication-4e5e8.firebasestorage.app',
+    measurementId: 'G-2TKL1X77NE',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCM8PxdMTGb2Td1ZI73eErKN0LH0eZkN-0',
+    appId: '1:715043575706:ios:2a6fb3883bf9bfb6ac4c23',
+    messagingSenderId: '715043575706',
+    projectId: 'chatapplication-4e5e8',
+    storageBucket: 'chatapplication-4e5e8.firebasestorage.app',
+    iosBundleId: 'com.example.chatApplication',
+  );
+
 }
