@@ -39,7 +39,7 @@ class _AllMessagesPageState extends State<AllMessagesPage> {
       appBar: AppBar(
         title: Text(
           'Messages',
-          style: TextStyle(fontSize: 22, color: Colors.grey),
+          style: TextStyle(fontSize: 22, color: Colors.black38),
         ),
         actions: [
           PopupMenuButton(
@@ -112,7 +112,7 @@ class _AllMessagesPageState extends State<AllMessagesPage> {
                                       ));
                                 },
                                 child: Card(
-                                    color: Colors.grey.shade100,
+                                    color: Colors.white,
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: ListTile(

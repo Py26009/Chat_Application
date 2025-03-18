@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget{
         nextPage = AllMessagesPage();
       }
 
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>nextPage));
     });
     return Scaffold(
       body: Column(

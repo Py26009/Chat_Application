@@ -5,8 +5,28 @@ import 'package:flutter/material.dart';
 
 import 'ChatPage.dart';
 
-class ContactsPage extends StatelessWidget {
+class ContactsPage extends StatefulWidget {
   const ContactsPage({super.key});
+
+  @override
+  State<ContactsPage> createState() => _ContactsPageState();
+}
+
+class _ContactsPageState extends State<ContactsPage> {
+  String fromId = "";
+
+  @override
+  void initState() {
+    super.initState();
+    getFromId();
+  }
+
+  void getFromId() async {
+    fromId = await FireBaseRepository.getFromId();
+    setState(() {
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +69,7 @@ class ContactsPage extends StatelessWidget {
                                },
                                leading: CircleAvatar(
                                  maxRadius: 24,
-                                 backgroundImage: NewModel.profilePic!="" ? NetworkImage(NewModel.profilePic!):NetworkImage("https://static.vecteezy.com/system/resources/previews/000/546/647/original/vector-cartoon-bunny-rabbit-graphic.jpg"),
+                                 backgroundImage: NewModel.profilePic!="" ? NetworkImage(NewModel.profilePic!):NetworkImage("https://static.vecteezy.com/system/resources/previews/001/503/756/original/boy-face-avatar-cartoon-free-vector.jpg")as ImageProvider ,
                                ),
                                subtitle: Column(
                                  crossAxisAlignment: CrossAxisAlignment.start,
